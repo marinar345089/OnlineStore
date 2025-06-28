@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./null.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./api.js" defer></script>
+    <script src="./cart.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__row">
+          <img src="./img/logomark.svg" alt="" />
+          <div class="header__nav">
+            <a href="./index.html" class="header__link">Home</a>
+          </div>
+          <div class="search">
+            <div class="search__bar">
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.22521 16.9799C11.28 16.9799 13.2507 16.1636 14.7037 14.7106C16.1566 13.2577 16.9729 11.287 16.9729 9.23219C16.9729 7.17737 16.1566 5.20672 14.7037 3.75374C13.2507 2.30077 11.28 1.4845 9.22521 1.4845C7.1704 1.4845 5.19974 2.30077 3.74677 3.75374C2.2938 5.20672 1.47752 7.17737 1.47752 9.23219C1.47752 11.287 2.2938 13.2577 3.74677 14.7106C5.19974 16.1636 7.1704 16.9799 9.22521 16.9799Z"
+                  stroke="#878A92"
+                  stroke-width="1.44"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.5225 19.5155L14.5782 15.5712"
+                  stroke="#878A92"
+                  stroke-width="1.44"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                class="search__input"
+                type="text"
+                placeholder="Search products"
+              />
+            </div>
+            <a href="/cart" class="cart__icon">
+              <img src="./img/cart.svg" alt="Корзина" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="ecommerce">
+          <div class="path-to-page">
+            <div class="page__title">
+              <span class="big-bold__font">Cart</span>
+            </div>
+            <nav class="breadcrumbs__cart">
+              <a href="./index.html"
+                ><span class="dull__font">Ecommerce</span></a
+              >
+              <span class="separator"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M14.8117 11.4673C15.0609 11.7443 15.063 12.1958 14.8163 12.4757L9.94859 18L9.04604 16.9967L13.4672 11.9793L9 7.01366L9.89321 6L14.8117 11.4673Z"
+                    fill="#71747E"
+                  />
+                </svg>
+              </span>
+              <span class="current"><span class="bold__font">Cart</span></span>
+            </nav>
+          </div>
+        </section>
+        <section class="cart__page">
+          <div class="your__cart">
+            <div class="your-cart__title">Your cart</div>
+            <div class="cart__products">
+              <template class="cart__template">
+                <div class="chosen__product">
+                  <img
+                    class="item__img"
+                    src="./img/chosen_t-shirt.svg"
+                    alt=""
+                  />
+                  <div class="item__characteristics">
+                    <div class="item__title">Raw Black T-Shirt Lineup</div>
+                    <div class="price__amount">
+                      <p class="price">$75.00</p>
+                      <div class="amount__delete">
+                        <div class="amount">
+                          <button class="remove">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M3.33334 8H11.3333"
+                                stroke="#5C5F6A"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                          <p class="count">1</p>
+                          <button class="add">
+                            <svg
+                              width="16"
+                              height="16"
+                              viewBox="0 0 16 16"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M8 4V12"
+                                stroke="#5C5F6A"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                              <path
+                                d="M4 8H12"
+                                stroke="#5C5F6A"
+                                stroke-width="1.7"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <button class="delete__item">
+                          <svg
+                            width="40"
+                            height="40"
+                            viewBox="0 0 40 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <rect
+                              width="40"
+                              height="40"
+                              rx="4"
+                              fill="#F6F6F6"
+                            />
+                            <path
+                              d="M25 15L15 25"
+                              stroke="#5C5F6A"
+                              stroke-width="1.7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M15 15L25 25"
+                              stroke="#5C5F6A"
+                              stroke-width="1.7"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+          <div class="order__summary">
+            <p class="order-summary__title">Order Summary</p>
+            <div class="order__details">
+              <div class="subtotal">
+                <p>Subtotal</p>
+                <p class="subtotal__price">$ 90.00</p>
+              </div>
+              <div class="shipping">
+                <p>Shipping:</p>
+                <p class="shipping__price">Free</p>
+              </div>
+              <div class="tax">
+                <p>Tax:</p>
+                <p class="tax__price">$ 3.00</p>
+              </div>
+              <div class="total">
+                <p>Total</p>
+                <p class="total__price">$ 100.00</p>
+              </div>
+            </div>
+            <div class="order__buttons">
+              <button class="checkout">Checkout</button>
+              <a href="./index.html" class="continue__shopping"
+                >Continue Shopping</a
+              >
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

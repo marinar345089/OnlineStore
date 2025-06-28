@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./null.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./api.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__row">
+          <img src="./img/logomark.svg" alt="" />
+          <div class="header__nav">
+            <a href="" class="header__link">Home</a>
+            <select class="search__select">
+              <!-- <option value="categories">Categories</option>  -->
+              <template class="search__template">
+                <option value="perfume">Perfume</option>
+              </template>
+            </select>
+          </div>
+          <div class="search">
+            <div class="search__bar">
+              <svg
+                width="20"
+                height="21"
+                viewBox="0 0 20 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.22521 16.9799C11.28 16.9799 13.2507 16.1636 14.7037 14.7106C16.1566 13.2577 16.9729 11.287 16.9729 9.23219C16.9729 7.17737 16.1566 5.20672 14.7037 3.75374C13.2507 2.30077 11.28 1.4845 9.22521 1.4845C7.1704 1.4845 5.19974 2.30077 3.74677 3.75374C2.2938 5.20672 1.47752 7.17737 1.47752 9.23219C1.47752 11.287 2.2938 13.2577 3.74677 14.7106C5.19974 16.1636 7.1704 16.9799 9.22521 16.9799Z"
+                  stroke="#878A92"
+                  stroke-width="1.44"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.5225 19.5155L14.5782 15.5712"
+                  stroke="#878A92"
+                  stroke-width="1.44"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                class="search__input"
+                type="search"
+                placeholder="Search products"
+              />
+            </div>
+            <a href="./cart.html" class="cart__icon">
+              <img src="./img/cart.svg" alt="Корзина" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="ecommerce">
+          <nav class="breadcrumbs">
+            <a href="./index.html"><span class="dull__font">Ecommerce</span></a>
+            <span class="separator"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M14.8117 11.4673C15.0609 11.7443 15.063 12.1958 14.8163 12.4757L9.94859 18L9.04604 16.9967L13.4672 11.9793L9 7.01366L9.89321 6L14.8117 11.4673Z"
+                  fill="#71747E"
+                />
+              </svg>
+            </span>
+            <span class="current"
+              ><span class="bold__font">Products</span></span
+            >
+          </nav>
+        </section>
+        <section class="filter__page">
+          <div class="clothing__filter">
+            <div class="categories__filter">
+              <h2 class="filter-title">
+                <span class="bold__font">Categories</span>
+              </h2>
+              <ul class="categories__list">
+                <template class="category__template">
+                  <li class="category__option">
+                    <button class="list__check"></button>
+                    <span class="list__item">Perfume</span>
+                  </li>
+                </template>
+              </ul>
+            </div>
+          </div>
+          <div class="goods__container">
+            <div class="shown__filters">
+              <p class="filters">
+                <span class="bold__font">Applied filters:</span>
+              </p>
+              <div class="applied__filters">
+                <template class="selected-filter__template">
+                  <p class="filter__item">
+                    Perfume
+                    <img class="cross__close" src="./img/close.svg" alt="" />
+                  </p>
+                </template>
+              </div>
+            </div>
+            <div class="results__header">
+              <div class="results__count">
+                Showing <span class="start__count">1</span>-
+                <span class="end__count">9</span> Of
+                <span class="all__count">36</span> Results.
+              </div>
+              <div class="results__sort">
+                <select class="limit__select">
+                  <option value="limit">Limit</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="30">30</option>
+                </select>
+                <select class="sort__select">
+                  <option value="1">Sort by</option>
+                  <option value="2">Most Popular</option>
+                  <option value="3">Name</option>
+                  <option value="4">Price: Low to High</option>
+                  <option value="5">Price: High to Low</option>
+                </select>
+              </div>
+            </div>
+            <div class="products__grid">
+              <template class="product__template">
+                <div class="product__card">
+                  <img
+                    class="product__image"
+                    src="./img/Classic Monochrome Tees.svg"
+                  />
+                  <div class="product__info">
+                    <h3 class="product__title">Classic Monochrome Tees</h3>
+                    <div class="product__availability">
+                      <p class="product__stock">IN STOCK</p>
+                      <p class="product__price">$35.00</p>
+                    </div>
+                    <button class="product__btn">Add to Cart</button>
+                  </div>
+                </div>
+              </template>
+            </div>
+            <div class="pagination__container">
+              <div class="pagination">
+                <button class="previous__page">
+                  <img src="./img/chevron__left.svg" alt="" />
+                </button>
+                <div class="pages">
+                  <template class="page__template">
+                    <button class="page">1</button></template
+                  >
+                </div>
+                <button class="next__page">
+                  <img src="./img/Chevron Right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
